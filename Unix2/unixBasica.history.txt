@@ -1,0 +1,197 @@
+    1  python3
+    2  nano test.py
+    3  pwd
+    4  ls
+    5  cd Desktop/
+    6  mkdir practice
+    7  cd practice/
+    8  wget  https://raw.githubusercontent.com/prog4biol/pfb2018/master/files/sequences.nt.fa
+    9  cd ..
+   10  pwd
+   11  ls -F
+   12  cd practice/
+   13  wc sequences.nt.fa 
+   14  wc -l sequences.nt.fa 
+   15  wc -c sequences.nt.fa 
+   16  head -1 sequences.nt.fa 
+   17  tail -3 sequences.nt.fa 
+   18  man grep
+   19  grep -B sequences.nt.fa 
+   20  man grep
+   21  grep '>' sequences.nt.fa | wc -l
+   22  mv sequences.nt.fa cancer_genes.fasta
+   23  ls
+   24  pwd
+   25  cd ..
+   26  mv cuffdiff.txt > practice
+   27  mv cuffdiff.txt > practice/
+   28  ls
+   29  mv cuffdiff.txt practice/
+   30  cd practice/
+   31  ls
+   32  head -3 cuffdiff.txt 
+   33  man sort
+   34  sort 10 cuffdiff.txt > sorted.cuffdiff.out
+   35  sort cuffdiff.txt 10 > sorted.cuffdiff.out 
+   36  man sort
+   37  sort -k 10 cuffdiff.txt > sorted.cuffdiff.out
+   38  head -5 sorted.cuffdiff.out 
+   39  man cut
+   40  cut -d 10 sorted.cuffdiff.out 
+   41  cut -f 10 sorted.cuffdiff.out 
+   42  cut -f 10 sorted.cuffdiff.out | head -5
+   43  man sort
+   44  sort -r 10 cuffdiff.txt 
+   45  sort -k 10 -r cuffdiff.txt 
+   46  sort -k 10 -r cuffdiff.txt | column 
+   47  sort -k 10 -r cuffdiff.txt | column -t
+   48  sort -k 10 -r cuffdiff.txt | column -t | head -100 > top100.sorted.cuffdiff.out
+   49  wc top100.sorted.cuffdiff.out 
+   50  cut -f 1 
+   51  cut -f 1 top100.sorted.cuffdiff.out | sort | uniq > differentially.expressed.genes.txt
+   52  head -4 differentially.expressed.genes.txt 
+   53  head differentially.expressed.genes.txt 
+   54  head top100.sorted.cuffdiff.out 
+   55  cut -f 1 top100.sorted.cuffdiff.out | sort | uniq > differentially.expressed.genes.txt
+   56  head differentially.expressed.genes.txt 
+   57  cut -d 1 top100.sorted.cuffdiff.out | sort | uniq > differentially.expressed.genes.txt
+   58  man cut
+   59  cut -d ' ' -f 1 top100.sorted.cuffdiff.out | head
+   60  cut -d ' ' -f 1 top100.sorted.cuffdiff.out | sort | uniq > differentially.expressed.genes.txt
+   61  wc -l differentially.expressed.genes.txt 
+   62  git init
+   63  ls -a
+   64  cd..
+   65  rm .git
+   66  rmdir .git
+   67  man rmdir
+   68  rm -rf .git
+   69  ls
+   70  cd ..
+   71  cd ProblemSets/
+   72  git init
+   73  echo "# PFB-problemsets" >> README.md
+   74  cat README.md 
+   75  git add README.md
+   76  git commit -m "first commit"
+   77  git remote add origin https://github.com/francescajean/PFB-problemsets.git
+   78  git push -u origin master
+   79  nano git_exercises.txt
+   80  git add git_exercises.txt 
+   81  git commit -m 'added a line of random text'
+   82  git push origin master
+   83  git clone https://github.com/prog4biol/pfb2018.git
+   84  cd ..
+   85  cd practice/
+   86  mv * > ..
+   87  mv ~/Desktop/practice/* ..
+   88  mv ~Desktop/*.* ~/Desktop/ProblemSets/
+   89  mv ~Desktop/*.* ~/Desktop/ProblemSets
+   90  mv ~/Desktop/*.* ~/Desktop/ProblemSets
+   91  cd ..
+   92  cd ~
+   93  pwd
+   94  cd Desktop/
+   95  cd ProblemSets/
+   96  git add *
+   97  ls -a
+   98  git add *.out
+   99  git commit -m 'files created during Unix1 problem sets'
+  100  git push origin master
+  101  ls *.out
+  102  ls -1
+  103  man git rm
+  104  git rm 
+  105  git rm pfb2018/
+  106  git rm pfb2018
+  107  rmdir pfb2018/
+  108  rm -rf pfb2018/
+  109  git status
+  110  git add -u
+  111  git commit -m 'removal'
+  112  git push
+  113  mkdir
+  114  mkdir files
+  115  ls
+  116  mv cancer_genes.fasta files
+  117  ls
+  118  clone cut https://github.com/prog4biol/pfb2018.git
+  119  clone https://github.com/prog4biol/pfb2018.git
+  120  git clone https://github.com/prog4biol/pfb2018.git
+  121  rm -rf pfb2018/
+  122  rm -rf pfb2018
+  123  history
+  124  rmdir pfb2018/
+  125  rmdir -r pfb2018/
+  126  git status
+  127  ls -a
+  128  cd pfb2018/
+  129  ls -a
+  130  cd ..
+  131  ls
+  132  rm -rf pfb2018/
+  133  sudo rm -rf pfb2018/
+  134  cd pfb2018/
+  135  cd files/
+  136  ls -a
+  137  cd ..
+  138  cd ..
+  139  rm -rf pfb2018/.git*
+  140  ls
+  141  cd pfb2018/
+  142  rm -rf .git
+  143  rm -rf .git*
+  144  ld -lah
+  145  ls -lah
+  146  cd ..
+  147  rmdir pfb2018/
+  148  cd pfb2018/
+  149  ld
+  150  ls
+  151  ls files/
+  152  ls -la files/
+  153  cd files/
+  154  rm .afpDeleted1161808 
+  155  git rm .afpDeleted1161808 
+  156  cd ..
+  157  cd..
+  158  cd ..
+  159  cd ProblemSets/
+  160  cd ..
+  161  cd pfb2018/
+  162  rm -rf files/
+  163  cd ..
+  164  cd ProblemSets/
+  165  ls
+  166  git add files/cancer_genes.fasta 
+  167  git commit -m 'adding cancer_genes.fasta'
+  168  git push
+  169  ls
+  170  git push
+  171  git status
+  172  git commit -m 'remove cancer_genes.fasta'
+  173  git push
+  174  git add -u
+  175  git commit -m 'remove cancer file'
+  176  git push
+  177  git status
+  178  nano mysequences.txt
+  179  git add mysequences.txt 
+  180  git commit -m 'add mysequencestxt'
+  181  git push
+  182  mkdir fastas
+  183  cp ~/Desktop/ProblemSets/files/cancer_genes.fasta ~/Desktop/ProblemSets/fastas/
+  184  cd files/
+  185  rm cancer_genes.fasta 
+  186  ls
+  187  git add all *
+  188  cd ..
+  189  git add *
+  190  git status
+  191  git commit -m 
+  192  git commit -m 'update'
+  193  git push
+  194  history
+  195  ls
+  196  rm -rf files/
+  197  history > unixBasica.history.txt
